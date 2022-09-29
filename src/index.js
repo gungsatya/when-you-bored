@@ -1,13 +1,34 @@
 import "./style.css";
-import "@fortawesome/fontawesome-free/js/fontawesome";
-import "@fortawesome/fontawesome-free/js/solid";
-import "@fortawesome/fontawesome-free/js/regular";
-import "@fortawesome/fontawesome-free/js/brands";
 import CustomFooter from "./components/custom-footer";
 import CustomHeader from "./components/custom-header";
 import Activity from "./components/activity";
 import axios from "axios";
 import _ from "lodash";
+
+import { library, dom } from "@fortawesome/fontawesome-svg-core";
+import {
+  faEnvelope,
+  faRssSquare,
+  faRefresh,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
+library.add(
+  faEnvelope,
+  faRssSquare,
+  faGithub,
+  faLinkedin,
+  faTwitter,
+  faInstagram,
+  faRefresh
+);
+
+dom.watch();
 
 customElements.define("x-header", CustomHeader);
 customElements.define("x-footer", CustomFooter);
